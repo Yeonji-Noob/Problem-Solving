@@ -1,7 +1,4 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
-
-let a = input[0];
-let b = input[1];
+let [a, b] = require('fs').readFileSync('/dev/stdin').toString().split('\n');
 
 x_1 = b[2];
 x_2 = b[1];
