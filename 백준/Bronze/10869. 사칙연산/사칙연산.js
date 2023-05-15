@@ -1,11 +1,11 @@
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
-let a = Number(input[0].split(' ')[0]);
-let b = Number(input[0].split(' ')[1]);
+let [a, b] = input[0].split(' ').map(Number);
 
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(parseInt(a / b));
-console.log(a % b);
+console.log(
+`${a+b}
+${a-b}
+${a*b}
+${parseInt(a/b)}
+${a%b}`);
