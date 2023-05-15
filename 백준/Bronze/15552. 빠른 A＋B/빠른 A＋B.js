@@ -1,14 +1,8 @@
-let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').slice(1);
 
-let test = Number(input[0]);
-
-let answer = '';
-for (let i = 1; i <= test; i++) {
-    let data = input[i].split(' ')
-    let a = Number(data[0]);
-    let b = Number(data[1]);
-    answer += `${a + b}\n`;
-} 
+const answer = input.map(line => {
+  const [a, b] = line.split(' ').map(Number);
+  return a + b;
+}).join('\n');
 
 console.log(answer);
