@@ -1,8 +1,3 @@
-let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map(num => Number(num));
 
-let line = input[0].split(' ');
-
-let [a, b] = line.map(Number);
-
-console.log(a - b);
+console.log(input[0] - input[1]);
