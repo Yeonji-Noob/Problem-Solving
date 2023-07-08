@@ -1,6 +1,6 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(Number);
 
 let N = input.shift();
-let sorted = input.sort((a,b) => a-b);
+input.sort((a,b) => a-b);
 
-console.log(input.join('\n'));
+console.log(...input);
