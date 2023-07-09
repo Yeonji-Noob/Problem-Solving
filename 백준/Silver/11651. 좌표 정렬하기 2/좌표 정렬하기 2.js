@@ -17,7 +17,7 @@ arr.sort(compare);
 
 let answer = '';
 for (let point of arr) {
-    answer += point[0] + ' ' + point[1] + '\n';
+    answer += `${point[0]} ${point[1]}\n`;
 }
 
 console.log(answer);
